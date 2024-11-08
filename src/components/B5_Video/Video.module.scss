@@ -1,0 +1,287 @@
+@import "../../assets/scss/app";
+
+.video {
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 51px;
+
+  @include desktop {
+    padding-top: 0px;
+    margin-top: -90px;
+  }
+
+  .mobile {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: -120px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .desktop {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    top: 222px;
+    left: 50%;
+    width: 1825px;
+    transform: translateX(-50%);
+  }
+
+  .arrowdiv {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    @include desktop {
+      margin-top: 0px;
+      margin-bottom: 10px;
+    }
+
+    .arrow {
+      position: relative;
+      width: 60px;
+      height: 60px;
+
+      @include desktop {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+
+  .title {
+    position: relative;
+    z-index: 2;
+    @include b5-title;
+    font-size: 80px;
+    line-height: 49px;
+    text-align: center;
+    color: #000000;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+      font-size: 100px;
+      line-height: 100px;
+      width: 880px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .videoDemoWrapper {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 270px;
+    height: 466px;
+    border: 8px solid #ffffff;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+
+    @include desktop {
+      width: 314px;
+      height: 533px;
+      border: 16px solid #ffffff;
+      border-radius: 48px;
+    }
+
+    .preview {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+
+      @include desktop {
+        border-radius: 32px;
+      }
+    }
+
+    .btn {
+      @include button;
+      @include absoluteCenter;
+      z-index: 3;
+      width: 200px;
+      height: 200px;
+
+      @include desktop {
+        width: 293px;
+        height: 293px;
+      }
+
+      svg {
+        width: 80px;
+        height: 80px;
+        fill: #fff;
+
+        @include desktop {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+  }
+
+  .videoWrapper {
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+    box-sizing: border-box;
+    width: 270px;
+    height: 466px;
+    border: 8px solid #ffffff;
+    border-radius: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+
+    @include desktop {
+      width: 314px;
+      height: 533px;
+      border: 16px solid #ffffff;
+      border-radius: 48px;
+    }
+
+    &:hover {
+      .pauseBtn {
+        display: block;
+      }
+      .playBtn {
+        display: block;
+      }
+    }
+
+    .preview {
+      position: relative;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 8px;
+
+      @include desktop {
+        border-radius: 32px;
+      }
+    }
+
+    & > div {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 5;
+    }
+
+    .playBtn {
+      @include button;
+      @include absoluteCenter;
+      z-index: 101;
+      display: none;
+      width: 200px;
+      height: 200px;
+
+      @include desktop {
+        width: 293px;
+        height: 293px;
+      }
+
+      svg {
+        width: 80px;
+        height: 80px;
+        fill: #fff;
+
+        @include desktop {
+          width: 200px;
+          height: 200px;
+        }
+      }
+    }
+
+    .fullscreenBtn {
+      @include button;
+      position: absolute;
+      z-index: 5;
+      width: 50px;
+      height: 50px;
+      right: 10px;
+      top: 10px;
+
+      @include desktop {
+        width: 50px;
+        height: 50px;
+      }
+
+      svg {
+        width: 50px;
+        height: 50px;
+        fill: #fff;
+
+        @include desktop {
+          width: 50px;
+          height: 50px;
+        }
+      }
+    }
+
+    .pauseBtn {
+      @include button;
+      @include absoluteCenter;
+      z-index: 5;
+      width: 200px;
+      height: 200px;
+      display: none;
+
+      @include desktop {
+        width: 293px;
+        height: 293px;
+      }
+
+      svg {
+        width: 80px;
+        height: 80px;
+        fill: #fff;
+
+        @include desktop {
+          width: 170px;
+          height: 170px;
+        }
+      }
+    }
+  }
+
+  .text {
+    @include b5-text-mobile;
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+
+    @include desktop {
+      @include b5-text-desktop;
+      margin-top: 55px;
+      width: 735px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+}

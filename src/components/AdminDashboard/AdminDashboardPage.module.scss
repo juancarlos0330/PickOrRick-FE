@@ -1,0 +1,32 @@
+@import "../../assets/scss/app";
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  table {
+    tr {
+      th {
+        font-size: 32px;
+        padding: 10px;
+      }
+
+      td {
+        font-size: 24px;
+        padding: 10px;
+
+        &:nth-child(2) {
+          text-align: center;
+        }
+
+        input {
+          width: 25px;
+          height: 25px;
+        }
+      }
+    }
+  }
+}

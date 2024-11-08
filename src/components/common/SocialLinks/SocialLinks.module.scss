@@ -1,0 +1,72 @@
+@import "../../../assets/scss/app";
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  //margin-top: 28px;
+
+  @include desktop {
+    //margin-top: 66px;
+  }
+
+  .link {
+    position: relative;
+    display: block;
+    width: 56.76px;
+    height: 56.39px;
+
+    @include desktop {
+      width: 153px;
+      height: 150px;
+    }
+
+    &:not(:first-child) {
+      margin-left: 4px;
+
+      @include desktop {
+        margin-left: 40px;
+      }
+    }
+
+    img {
+      display: block;
+      width: 56.76px;
+      height: 56.39px;
+
+      @include desktop {
+        width: 153px;
+        height: 150px;
+      }
+    }
+
+    .icon {
+      transition: 0.3s;
+    }
+
+    .icon_hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 56.76px;
+      height: 56.39px;
+      opacity: 0;
+      transition: 0.3s;
+
+      @include desktop {
+        width: 153px;
+        height: 150px;
+      }
+
+    }
+
+    &:hover {
+      .icon {
+        opacity: 0;
+      }
+
+      .icon_hover {
+        opacity: 1;
+      }
+    }
+  }
+}

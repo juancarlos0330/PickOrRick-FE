@@ -1,0 +1,27 @@
+@import "../../../assets/scss/app";
+
+.timeCell {
+  box-sizing: border-box;
+  width: 58px;
+  height: 45px;
+  background: radial-gradient(5.12% 19.92% at 92.14% 90.6%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(5.71% 38.74% at 98.57% 49.57%, #499000 0%, rgba(73, 144, 0, 0) 100%), radial-gradient(5.24% 22.38% at 2.14% 30.77%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(9.67% 65.38% at 5% 91.03%, #499000 0%, rgba(73, 144, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #458D00 0%, #488D00 15.62%, #72B903 44.27%, #71B902 68.75%, #71BA02 100%);
+  border: 0.866242px solid #FFFFFF;
+  box-shadow: 0px 4.33121px 4.33121px rgba(0, 0, 0, 0.25);
+  border-radius: 13.4268px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 8px;
+
+  &_value {
+    font-size: 30px;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  &_unit {
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+  }
+}

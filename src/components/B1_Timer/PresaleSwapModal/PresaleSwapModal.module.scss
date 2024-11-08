@@ -1,0 +1,472 @@
+@import "../../../assets/scss/app";
+
+.chooseModal {
+  @include absoluteCenter;
+  background: radial-gradient(
+        94.89% 72.9% at 50% 38.93%,
+        #eff621 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        5.12% 19.92% at 92.14% 90.6%,
+        rgba(239, 246, 33, 0.8) 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+      5.71% 38.74% at 98.57% 49.57%,
+      #499000 0%,
+      rgba(73, 144, 0, 0) 100%
+    ),
+    radial-gradient(
+        5.24% 22.38% at 2.14% 30.77%,
+        rgba(239, 246, 33, 0.8) 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        9.67% 65.38% at 5% 91.03%,
+        #499000 0%,
+        rgba(73, 144, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(
+      180deg,
+      rgba(69, 141, 0, 0.85) 0%,
+      rgba(72, 141, 0, 0.85) 15.62%,
+      rgba(114, 185, 3, 0.85) 44.27%,
+      rgba(113, 185, 2, 0.85) 68.75%,
+      rgba(113, 186, 2, 0.85) 100%
+    );
+  border: 2.0416px solid #0e280e;
+  box-shadow: 8.16641px 8.16641px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.44992px);
+  border-radius: 12.2496px;
+  width: 300px;
+  padding: 50px 16px 20px;
+  box-sizing: border-box;
+
+  @include desktop {
+    border: 5px solid #0e280e;
+    box-shadow: 20px 20px 0px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    border-radius: 30px;
+    width: 736px;
+    padding: 120px 40px 60px;
+  }
+
+  .closeBtn {
+    @include button;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    top: 10px;
+    right: 10px;
+
+    @include desktop {
+      width: 67px;
+      height: 67px;
+      top: 25px;
+      right: 25px;
+    }
+
+    svg {
+      width: 27px;
+      height: 27px;
+
+      @include desktop {
+        width: 67px;
+        height: 67px;
+      }
+    }
+  }
+
+  .title {
+    @include b2-modal-title-mobile;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    @include desktop {
+      @include b2-modal-title;
+      font-size: 60px;
+      line-height: 74px;
+    }
+  }
+
+  .img {
+    display: block;
+    width: 262px;
+    height: 138px;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 110px;
+    transform: translateX(-50%);
+
+    @include desktop {
+      width: 644px;
+      height: 338px;
+      top: 270px;
+    }
+  }
+
+  .imgStep2 {
+    display: block;
+    width: 262.96px;
+    height: 138.01px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6px;
+
+    @include desktop {
+      width: 644px;
+      height: 338px;
+      margin-top: 15px;
+    }
+  }
+
+  .label {
+    @include b2-modal-label-mobile;
+    position: relative;
+    z-index: 2;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+
+    @include desktop {
+      @include b2-modal-label;
+      font-size: 40px;
+      line-height: 49px;
+    }
+
+    &_1 {
+      margin-top: 6px;
+
+      @include desktop {
+        margin-top: 14px;
+      }
+    }
+
+    &_2 {
+      margin-top: 5px;
+
+      @include desktop {
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .btns {
+    position: relative;
+    z-index: 2;
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      margin-top: 210px;
+    }
+
+    button {
+      @include button;
+      width: 50.45px;
+      height: 69.88px;
+
+      @include desktop {
+        width: 123.56px;
+        height: 171.13px;
+      }
+
+      &:last-child {
+        margin-left: 47px;
+
+        @include desktop {
+          margin-left: 115px;
+        }
+      }
+
+      img {
+        display: block;
+        width: 50.45px;
+        height: 69.88px;
+        transition: 0.3s;
+
+        @include desktop {
+          width: 123.56px;
+          height: 171.13px;
+        }
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .selectableView {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+
+    @include desktop {
+      margin-top: 10px;
+    }
+
+    div {
+      font-size: 14px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 50.45px;
+
+      @include desktop {
+        width: 123.56px;
+        font-size: 32px;
+      }
+
+      &:last-child {
+        margin-left: 47px;
+
+        @include desktop {
+          margin-left: 115px;
+        }
+      }
+    }
+  }
+
+  .btn {
+    @include centerRow;
+    background: radial-gradient(
+          5.12% 19.92% at 92.14% 90.6%,
+          rgba(239, 246, 33, 0.8) 0%,
+          rgba(239, 246, 33, 0) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      radial-gradient(
+        5.71% 38.74% at 98.57% 49.57%,
+        #499000 0%,
+        rgba(73, 144, 0, 0) 100%
+      ),
+      radial-gradient(
+          5.24% 22.38% at 2.14% 30.77%,
+          rgba(239, 246, 33, 0.8) 0%,
+          rgba(239, 246, 33, 0) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      radial-gradient(
+          9.67% 65.38% at 5% 91.03%,
+          #499000 0%,
+          rgba(73, 144, 0, 0) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+      linear-gradient(
+        180deg,
+        #458d00 0%,
+        #488d00 15.62%,
+        #72b903 44.27%,
+        #71b902 68.75%,
+        #71ba02 100%
+      );
+    border: 2.0416px solid #0e280e;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    height: 40px;
+    width: 100%;
+    text-decoration: none;
+    cursor: pointer;
+
+    @include desktop {
+      border: 5px solid #0e280e;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 100px;
+      height: 100px;
+    }
+
+    &_submit {
+      margin-top: 10px;
+
+      @include desktop {
+        margin-top: 25px;
+      }
+    }
+
+    &_join {
+      margin-top: 60px;
+    }
+
+    p {
+      @include border-yellow-2;
+      font-size: 20px;
+      line-height: 25px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #000000;
+
+      @include desktop {
+        @include border-yellow-3;
+        font-size: 45px;
+        line-height: 56px;
+      }
+    }
+
+    &:hover {
+      background: radial-gradient(
+            5.12% 19.92% at 92.14% 90.6%,
+            rgba(239, 246, 33, 0.8) 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+          5.71% 38.74% at 98.57% 49.57%,
+          #499000 0%,
+          rgba(73, 144, 0, 0) 100%
+        ),
+        radial-gradient(
+            5.24% 22.38% at 2.14% 30.77%,
+            rgba(239, 246, 33, 0.8) 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            9.67% 65.38% at 5% 91.03%,
+            #499000 0%,
+            rgba(73, 144, 0, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        linear-gradient(0deg, rgba(239, 246, 33, 0.4), rgba(239, 246, 33, 0.4)),
+        linear-gradient(
+          180deg,
+          #458d00 0%,
+          #488d00 15.62%,
+          #72b903 44.27%,
+          #71b902 68.75%,
+          #71ba02 100%
+        );
+    }
+  }
+
+  .form {
+    margin-top: 12px;
+    position: relative;
+
+    @include desktop {
+      margin-top: 30px;
+    }
+
+    .WethPText {
+      color: #000;
+      position: absolute;
+      font-size: 16px;
+      top: 12px;
+      right: 25px;
+      text-shadow: 0 -3px 0 #ffffff, 0 -3px 0 #ffffff, 0 3px 0 #ffffff,
+        0 3px 0 #ffffff, -3px 0 0 #ffffff, 3px 0 0 #ffffff, -3px 0 0 #ffffff,
+        3px 0 0 #ffffff, -1px -3px 0 #ffffff, 1px -3px 0 #ffffff,
+        -1px 3px 0 #ffffff, 1px 3px 0 #ffffff, -3px -1px 0 #ffffff,
+        3px -1px 0 #ffffff, -3px 1px 0 #ffffff, 3px 1px 0 #ffffff,
+        -2px -3px 0 #ffffff, 2px -3px 0 #ffffff, -2px 3px 0 #ffffff,
+        2px 3px 0 #ffffff, -3px -2px 0 #ffffff, 3px -2px 0 #ffffff,
+        -3px 2px 0 #ffffff, 3px 2px 0 #ffffff, -3px -3px 0 #ffffff,
+        3px -3px 0 #ffffff, -3px 3px 0 #ffffff, 3px 3px 0 #ffffff,
+        -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff,
+        3px 3px 0 #ffffff, 0px 15px 10px rgba(0, 0, 0, 0.25);
+
+      @include desktop {
+        font-size: 32px;
+        top: 20px;
+        right: 45px;
+      }
+    }
+
+    .RickPText {
+      color: #000;
+      position: absolute;
+      font-size: 16px;
+      top: 82px;
+      right: 25px;
+      text-shadow: 0 -3px 0 #ffffff, 0 -3px 0 #ffffff, 0 3px 0 #ffffff,
+        0 3px 0 #ffffff, -3px 0 0 #ffffff, 3px 0 0 #ffffff, -3px 0 0 #ffffff,
+        3px 0 0 #ffffff, -1px -3px 0 #ffffff, 1px -3px 0 #ffffff,
+        -1px 3px 0 #ffffff, 1px 3px 0 #ffffff, -3px -1px 0 #ffffff,
+        3px -1px 0 #ffffff, -3px 1px 0 #ffffff, 3px 1px 0 #ffffff,
+        -2px -3px 0 #ffffff, 2px -3px 0 #ffffff, -2px 3px 0 #ffffff,
+        2px 3px 0 #ffffff, -3px -2px 0 #ffffff, 3px -2px 0 #ffffff,
+        -3px 2px 0 #ffffff, 3px 2px 0 #ffffff, -3px -3px 0 #ffffff,
+        3px -3px 0 #ffffff, -3px 3px 0 #ffffff, 3px 3px 0 #ffffff,
+        -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff,
+        3px 3px 0 #ffffff, 0px 15px 10px rgba(0, 0, 0, 0.25);
+      @include desktop {
+        font-size: 32px;
+        top: 132px;
+        right: 45px;
+      }
+    }
+
+    .RatePText {
+      color: #000;
+      position: absolute;
+      top: 14px;
+      right: 70px;
+      font-size: 14px;
+
+      @include desktop {
+        top: 25px;
+        right: 140px;
+        font-size: 28px;
+      }
+    }
+
+    .field {
+      width: 100%;
+      background: rgba(217, 217, 217, 0.4);
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 6px;
+      margin-bottom: 30px;
+
+      input {
+        font-family: "Fresh Pickle";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 9px 12px;
+
+        &::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        &::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        @include desktop {
+          font-size: 40px;
+          line-height: 49px;
+          padding: 12px 40px;
+        }
+      }
+
+      p {
+        font-family: "Fresh Pickle";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+
+        @include desktop {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

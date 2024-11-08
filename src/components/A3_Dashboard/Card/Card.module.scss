@@ -1,0 +1,896 @@
+@import "../../../assets/scss/app";
+
+.card {
+  position: relative;
+  padding: 21px 15px;
+  background: radial-gradient(
+        94.89% 72.9% at 50% 38.93%,
+        #eff621 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        5.12% 19.92% at 92.14% 90.6%,
+        rgba(239, 246, 33, 0.8) 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+      5.71% 38.74% at 98.57% 49.57%,
+      #499000 0%,
+      rgba(73, 144, 0, 0) 100%
+    ),
+    radial-gradient(
+        5.24% 22.38% at 2.14% 30.77%,
+        rgba(239, 246, 33, 0.8) 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        9.67% 65.38% at 5% 91.03%,
+        #499000 0%,
+        rgba(73, 144, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 3px solid #0e280e;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+
+  @include desktop {
+    padding: 12px;
+  }
+
+  .topPart {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    .balance {
+      position: relative;
+      border: 3px solid #0e280e;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding-top: 73px;
+      padding-bottom: 60px;
+
+      @include desktop {
+        width: 224px;
+      }
+
+      .label {
+        @include border-white-2;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        color: #000000;
+      }
+
+      .value {
+        @include border-yellow-2;
+        font-size: 30px;
+        line-height: 37px;
+        text-align: center;
+        color: #000000;
+        margin-top: 16px;
+      }
+
+      .name {
+        @include border-yellow-2;
+        margin-top: 16px;
+        font-size: 20px;
+        line-height: 25px;
+        text-align: center;
+        color: #000000;
+      }
+
+      svg {
+        width: 230px;
+        height: 230px;
+        position: absolute;
+        left: 50%;
+        top: 10px;
+        transform: translateX(-50%);
+      }
+    }
+
+    .deposit {
+      position: relative;
+      background: radial-gradient(
+            94.89% 72.9% at 50% 38.93%,
+            #eff621 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            5.12% 19.92% at 92.14% 90.6%,
+            rgba(239, 246, 33, 0.8) 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+          5.71% 38.74% at 98.57% 49.57%,
+          #499000 0%,
+          rgba(73, 144, 0, 0) 100%
+        ),
+        radial-gradient(
+            5.24% 22.38% at 2.14% 30.77%,
+            rgba(239, 246, 33, 0.8) 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            9.67% 65.38% at 5% 91.03%,
+            #499000 0%,
+            rgba(73, 144, 0, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      border: 3px solid #0e280e;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      margin-top: 22px;
+      padding: 16px;
+
+      @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+        margin-top: 0;
+        margin-left: 13px;
+        box-sizing: border-box;
+        width: 474px;
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 112px;
+        padding-right: 112px;
+      }
+
+      .rows {
+        .row {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+
+          &:last-child {
+            margin-top: 15px;
+          }
+
+          p:nth-child(1) {
+            @include border-white-2;
+            font-size: 20px;
+            line-height: 25px;
+            color: #000000;
+          }
+
+          p:nth-child(2) {
+            @include border-yellow2-2;
+            font-size: 30px;
+            line-height: 37px;
+            color: #000000;
+          }
+        }
+      }
+
+      .btns {
+        margin-top: 22px;
+
+        @include desktop {
+          margin-top: 20px;
+        }
+
+        button {
+          @include button;
+          @include centerRow;
+          width: 100%;
+          height: 47px;
+          background: radial-gradient(
+                5.12% 19.92% at 92.14% 90.6%,
+                rgba(239, 246, 33, 0.8) 0%,
+                rgba(239, 246, 33, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            radial-gradient(
+              5.71% 38.74% at 98.57% 49.57%,
+              #499000 0%,
+              rgba(73, 144, 0, 0) 100%
+            ),
+            radial-gradient(
+                5.24% 22.38% at 2.14% 30.77%,
+                rgba(239, 246, 33, 0.8) 0%,
+                rgba(239, 246, 33, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            radial-gradient(
+                9.67% 65.38% at 5% 91.03%,
+                #499000 0%,
+                rgba(73, 144, 0, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            linear-gradient(
+              180deg,
+              #458d00 0%,
+              #488d00 15.62%,
+              #72b903 44.27%,
+              #71b902 68.75%,
+              #71ba02 100%
+            );
+          border: 3px solid #0e280e;
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 100px;
+
+          p {
+            @include border-yellow-3;
+            font-size: 20px;
+            line-height: 25px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+          }
+
+          &:last-child {
+            margin-top: 7px;
+          }
+        }
+      }
+
+      .img {
+        @include onlyDesktop;
+        position: absolute;
+
+        &_1 {
+          width: 65px;
+          height: 141px;
+          bottom: 0;
+          left: 28px;
+        }
+
+        &_2 {
+          width: 57px;
+          height: 171px;
+          top: 23px;
+          right: 0px;
+        }
+      }
+    }
+
+    .rewards {
+      background: radial-gradient(
+            94.89% 72.9% at 50% 38.93%,
+            #eff621 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            5.12% 19.92% at 92.14% 90.6%,
+            rgba(239, 246, 33, 0.8) 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+          5.71% 38.74% at 98.57% 49.57%,
+          #499000 0%,
+          rgba(73, 144, 0, 0) 100%
+        ),
+        radial-gradient(
+            5.24% 22.38% at 2.14% 30.77%,
+            rgba(239, 246, 33, 0.8) 0%,
+            rgba(239, 246, 33, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+        radial-gradient(
+            9.67% 65.38% at 5% 91.03%,
+            #499000 0%,
+            rgba(73, 144, 0, 0) 100%
+          )
+          /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      border: 3px solid #0e280e;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-sizing: border-box;
+      padding-top: 17px;
+      padding-bottom: 13px;
+      margin-top: 22px;
+
+      @include desktop {
+        margin-top: 0;
+        margin-left: 15px;
+        width: 371px;
+      }
+
+      .title {
+        @include border-yellow-3;
+        font-size: 40px;
+        line-height: 49px;
+        text-align: center;
+        color: #000000;
+      }
+
+      .text {
+        @include border-white-2;
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        text-align: center;
+
+        &_1 {
+          margin-top: 14px;
+        }
+
+        &_2 {
+          margin-top: 12px;
+        }
+      }
+
+      .value {
+        @include border-yellow2-2;
+        margin-top: 10px;
+        font-size: 60px;
+        line-height: 41px;
+        text-align: center;
+      }
+
+      .btns {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+
+        button {
+          @include button;
+          width: 46px;
+          height: 46px;
+          background: radial-gradient(
+                5.12% 19.92% at 92.14% 90.6%,
+                rgba(239, 246, 33, 0.8) 0%,
+                rgba(239, 246, 33, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            radial-gradient(
+              5.71% 38.74% at 98.57% 49.57%,
+              #499000 0%,
+              rgba(73, 144, 0, 0) 100%
+            ),
+            radial-gradient(
+                5.24% 22.38% at 2.14% 30.77%,
+                rgba(239, 246, 33, 0.8) 0%,
+                rgba(239, 246, 33, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            radial-gradient(
+                9.67% 65.38% at 5% 91.03%,
+                #499000 0%,
+                rgba(73, 144, 0, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            linear-gradient(
+              180deg,
+              #458d00 0%,
+              #488d00 15.62%,
+              #72b903 44.27%,
+              #71b902 68.75%,
+              #71ba02 100%
+            );
+          border: 3px solid #0e280e;
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 100px;
+
+          &:last-child {
+            margin-left: 8px;
+          }
+
+          svg {
+            position: relative;
+            top: 6px;
+            right: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottomPart {
+    position: relative;
+    border: 3px solid #0e280e;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding-top: 38px;
+    padding-bottom: 103px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 22px;
+
+    @include desktop {
+      padding-top: 100px;
+      padding-bottom: 56px;
+      padding-left: 64px;
+      padding-right: 64px;
+      margin-top: 14px;
+    }
+
+    .top {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 22px;
+
+      @include desktop {
+        margin-top: 0;
+        position: absolute;
+        left: 50%;
+        top: 38px;
+        transform: translateX(-50%);
+      }
+
+      .title {
+        @include border-yellow-3;
+        font-size: 40px;
+        line-height: 49px;
+        text-align: center;
+        color: #000000;
+
+        @include desktop {
+          font-size: 60px;
+          line-height: 74px;
+        }
+
+        &_end {
+          @include desktop {
+            width: 310px;
+          }
+        }
+      }
+
+      .timeRow {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+          margin-top: 27px;
+          flex-direction: row;
+          justify-content: center;
+          //align-items: flex-end;
+        }
+
+        .label {
+          @include border-white-2;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+
+          @include desktop {
+            margin-top: 20px;
+          }
+        }
+
+        .times {
+          display: flex;
+          margin-top: 12px;
+
+          @include desktop {
+            margin-top: 0;
+            margin-left: 7px;
+          }
+
+          .divider {
+            font-size: 43.3121px;
+            line-height: 53px;
+            text-align: center;
+            color: #000000;
+            margin-left: 2px;
+            margin-right: 2px;
+            margin-top: -5px;
+          }
+        }
+      }
+
+      .deposit {
+        margin-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+          margin-top: 20px;
+          flex-direction: row;
+          align-items: flex-end;
+        }
+
+        .label {
+          @include border-white-2;
+          font-size: 20px;
+          line-height: 25px;
+          color: #000000;
+        }
+
+        .amountWrapper {
+          margin-top: 17px;
+          height: 44px;
+          background: rgba(217, 217, 217, 0.4);
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 6px;
+          padding-left: 10px;
+          padding-right: 10px;
+          display: flex;
+          width: fit-content;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          @include desktop {
+            margin-top: 0;
+            margin-left: 23px;
+          }
+
+          input {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            width: 100px;
+            font-size: 26px;
+            text-align: center;
+          }
+
+          p {
+            @include border-yellow-2;
+            font-size: 30px;
+            line-height: 20px;
+            color: #000000;
+            text-align: center;
+          }
+        }
+      }
+
+      .voteBtn {
+        @include button;
+        @include centerRow;
+        background: radial-gradient(
+              5.12% 19.92% at 92.14% 90.6%,
+              rgba(239, 246, 33, 0.8) 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+            5.71% 38.74% at 98.57% 49.57%,
+            #499000 0%,
+            rgba(73, 144, 0, 0) 100%
+          ),
+          radial-gradient(
+              5.24% 22.38% at 2.14% 30.77%,
+              rgba(239, 246, 33, 0.8) 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              9.67% 65.38% at 5% 91.03%,
+              #499000 0%,
+              rgba(73, 144, 0, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          linear-gradient(
+            180deg,
+            #458d00 0%,
+            #488d00 15.62%,
+            #72b903 44.27%,
+            #71b902 68.75%,
+            #71ba02 100%
+          );
+        border: 3px solid #0e280e;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        width: 157px;
+        height: 42px;
+        margin-top: 19px;
+
+        @include desktop {
+          margin-top: 27px;
+        }
+
+        p {
+          @include border-yellow-3;
+          font-size: 25px;
+          line-height: 31px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #000000;
+        }
+
+        &:disabled {
+          background: unset;
+          cursor: not-allowed;
+        }
+      }
+
+      .jar {
+        margin-top: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include desktop {
+          margin-top: 24px;
+        }
+
+        .label {
+          @include border-white-2;
+          font-size: 20px;
+          line-height: 25px;
+          color: #000000;
+        }
+
+        .rickBtn {
+          @include button;
+          @include centerRow;
+          background: radial-gradient(
+                5.12% 19.92% at 92.14% 90.6%,
+                rgba(239, 246, 33, 0.8) 0%,
+                rgba(239, 246, 33, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            radial-gradient(
+              5.71% 38.74% at 98.57% 49.57%,
+              #499000 0%,
+              rgba(73, 144, 0, 0) 100%
+            ),
+            radial-gradient(
+                5.24% 22.38% at 2.14% 30.77%,
+                rgba(239, 246, 33, 0.8) 0%,
+                rgba(239, 246, 33, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            radial-gradient(
+                9.67% 65.38% at 5% 91.03%,
+                #499000 0%,
+                rgba(73, 144, 0, 0) 100%
+              )
+              /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+            linear-gradient(
+              180deg,
+              #458d00 0%,
+              #488d00 15.62%,
+              #72b903 44.27%,
+              #71b902 68.75%,
+              #71ba02 100%
+            );
+          border: 3px solid #0e280e;
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+          border-radius: 100px;
+          width: 157px;
+          height: 42px;
+          font-size: 25px;
+          margin-top: 34px;
+
+          @include desktop {
+            margin-top: 18px;
+            width: 250px;
+          }
+
+          &:disabled {
+            background: transparent;
+            cursor: not-allowed;
+            color: #000;
+          }
+
+          p {
+            @include border-yellow-3;
+            font-size: 25px;
+            line-height: 31px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #000000;
+          }
+
+          img {
+            margin-left: 10px;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 18px;
+
+      @include desktop {
+        margin-top: 0;
+      }
+
+      .left,
+      .right {
+        .logoMobile {
+          @include onlyMobile;
+        }
+
+        .info {
+          display: flex;
+          margin-top: 10px;
+
+          @include desktop {
+            margin-top: 0;
+          }
+
+          .rest {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 56px;
+
+            @include desktop {
+              margin-top: 0px;
+            }
+
+            .logoDesktop {
+              @include onlyDesktop;
+              margin-top: 10px;
+            }
+
+            .result {
+              @include border-black-6;
+              font-size: 40px;
+              line-height: 27px;
+              text-align: center;
+              color: #eff621;
+
+              @include desktop {
+                @include border-black-11;
+                margin-top: 25px;
+                font-size: 100px;
+                line-height: 68px;
+              }
+            }
+
+            .votes {
+              @include border-white-2;
+              margin-top: 20px;
+              font-size: 20px;
+              line-height: 25px;
+              color: #000000;
+
+              @include desktop {
+                margin-top: 35px;
+              }
+            }
+          }
+
+          .status {
+            position: relative;
+            box-sizing: border-box;
+            background: #838383;
+            border: 10px solid #ffffff;
+            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+            border-radius: 100px;
+            width: 40px;
+            height: 174px;
+
+            @include desktop {
+              width: 62px;
+              height: 398px;
+            }
+
+            .inner {
+              background: radial-gradient(
+                    5.12% 19.92% at 92.14% 90.6%,
+                    rgba(239, 246, 33, 0.8) 0%,
+                    rgba(239, 246, 33, 0) 100%
+                  )
+                  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                radial-gradient(
+                  5.71% 38.74% at 98.57% 49.57%,
+                  #499000 0%,
+                  rgba(73, 144, 0, 0) 100%
+                ),
+                radial-gradient(
+                    5.24% 22.38% at 2.14% 30.77%,
+                    rgba(239, 246, 33, 0.8) 0%,
+                    rgba(239, 246, 33, 0) 100%
+                  )
+                  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                radial-gradient(
+                    9.67% 65.38% at 5% 91.03%,
+                    #499000 0%,
+                    rgba(73, 144, 0, 0) 100%
+                  )
+                  /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+                linear-gradient(
+                  180deg,
+                  #458d00 0%,
+                  #488d00 15.62%,
+                  #72b903 44.27%,
+                  #71b902 68.75%,
+                  #71ba02 100%
+                );
+              border: 1px solid #0e280e;
+              box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+              border-radius: 100px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              height: 100%;
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .left {
+        .logoMobile {
+          width: 82.9px;
+          height: 55.66px;
+        }
+
+        .info {
+          .rest {
+            margin-left: 8px;
+
+            @include desktop {
+              margin-left: 54px;
+            }
+
+            .logoDesktop {
+              width: 140px;
+              height: 94px;
+            }
+          }
+        }
+      }
+
+      .right {
+        //display: flex;
+        //flex-direction: row;
+        //align-items: flex-end;
+
+        .logoMobile {
+          width: 91.19px;
+          height: 50.92px;
+          margin-left: auto;
+        }
+
+        .info {
+          justify-content: flex-end;
+
+          .rest {
+            margin-right: 8px;
+
+            @include desktop {
+              margin-right: 54px;
+            }
+
+            .logoDesktop {
+              width: 154px;
+              height: 86px;
+            }
+          }
+        }
+      }
+    }
+
+    .bottomImg {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 246px;
+      height: auto;
+
+      @include desktop {
+        width: 576px;
+      }
+    }
+  }
+}

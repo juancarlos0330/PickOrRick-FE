@@ -1,0 +1,77 @@
+//========= BREAK POINTS ===========//
+@mixin desktop {
+  @media all and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin onlyMobile($displayType: block) {
+  display: $displayType;
+  @content;
+
+  @include desktop() {
+    display: none;
+  }
+}
+
+@mixin onlyDesktop($displayType: block) {
+  display: none;
+
+  @include desktop {
+    display: $displayType;
+    @content;
+  }
+}
+
+//========= OTHER ===========//
+@mixin container {
+  box-sizing: border-box;
+  padding-left: 18px;
+  padding-right: 18px;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@mixin inner {
+  @include desktop {
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin centerColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin centerRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button() {
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+@mixin absoluteCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin textShadow($w, $c) {
+  text-shadow: $w 0 0 $c, -$w 0 0 $c, 0 $w 0 $c, 0 -$w 0 $c,
+    calc(#{$w} / 2) calc(#{$w} / 2) 0 $c, calc(#{$w} / -2) calc(#{$w} / -2) 0 $c,
+    calc(#{$w} / 2) calc(#{$w} / -2) 0 $c, calc(#{$w} / -2) calc(#{$w} / 2) $c;
+}

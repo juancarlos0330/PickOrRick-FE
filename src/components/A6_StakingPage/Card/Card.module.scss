@@ -1,0 +1,558 @@
+@import "../../../assets/scss/app";
+
+.card {
+  position: relative;
+  padding: 21px 15px;
+  background: radial-gradient(
+        94.89% 72.9% at 50% 38.93%,
+        #eff621 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        5.12% 19.92% at 92.14% 90.6%,
+        rgba(239, 246, 33, 0.8) 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+      5.71% 38.74% at 98.57% 49.57%,
+      #499000 0%,
+      rgba(73, 144, 0, 0) 100%
+    ),
+    radial-gradient(
+        5.24% 22.38% at 2.14% 30.77%,
+        rgba(239, 246, 33, 0.8) 0%,
+        rgba(239, 246, 33, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    radial-gradient(
+        9.67% 65.38% at 5% 91.03%,
+        #499000 0%,
+        rgba(73, 144, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 3px solid #0e280e;
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+
+  @include desktop {
+    padding: 12px;
+  }
+
+  .topBlock {
+    display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-column-gap: 16px;
+    }
+
+    & > div {
+      &:not(:first-child) {
+        margin-top: 20px;
+
+        @include desktop {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &_firstSection,
+    &_secondSection,
+    &_thirdSection,
+    &_fourSection {
+      position: relative;
+      box-sizing: border-box;
+      border: 3px solid #0e280e;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      height: 206px;
+    }
+
+    &_firstSection {
+      padding-top: 112px;
+      padding-left: 13px;
+
+      .ufo {
+        position: absolute;
+        z-index: 1;
+        width: 162px;
+        height: 145px;
+        top: 0;
+        left: 0;
+      }
+
+      .label {
+        @include border-white-3;
+        position: relative;
+        z-index: 2;
+        font-size: 30px;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .value {
+        @include border-yellow-2;
+        font-size: 45px;
+        line-height: 31px;
+        color: #000000;
+        margin-top: 14px;
+      }
+    }
+
+    &_secondSection {
+      padding-top: 112px;
+      padding-left: 18px;
+
+      .rick {
+        position: absolute;
+        z-index: 1;
+        width: 123px;
+        height: 115px;
+        top: 12px;
+        left: 14px;
+      }
+
+      .label {
+        @include border-white-3;
+        position: relative;
+        z-index: 2;
+        font-size: 30px;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .value {
+        @include border-yellow-2;
+        font-size: 45px;
+        line-height: 31px;
+        color: #000000;
+        margin-top: 14px;
+      }
+    }
+
+    &_thirdSection {
+      padding-top: 112px;
+      padding-left: 18px;
+
+      .jars {
+        position: absolute;
+        z-index: 1;
+        width: 108.15px;
+        height: 109px;
+        top: 29px;
+        left: 34px;
+      }
+
+      .label {
+        @include border-white-3;
+        position: relative;
+        z-index: 2;
+        font-size: 30px;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .value {
+        @include border-yellow-2;
+        font-size: 45px;
+        line-height: 31px;
+        color: #000000;
+        margin-top: 14px;
+      }
+    }
+
+    &_fourSection {
+      padding-top: 112px;
+      padding-left: 22px;
+
+      .stakers {
+        position: absolute;
+        z-index: 1;
+        width: 221px;
+        height: 150.13px;
+        top: 7px;
+        left: 13px;
+      }
+
+      .label {
+        @include border-white-3;
+        position: relative;
+        z-index: 2;
+        font-size: 30px;
+        line-height: 20px;
+        color: #000000;
+      }
+
+      .value {
+        @include border-yellow-2;
+        font-size: 45px;
+        line-height: 31px;
+        color: #000000;
+        margin-top: 14px;
+      }
+    }
+  }
+
+  .bottomBlock {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+
+    @include desktop {
+      flex-direction: row;
+      margin-top: 16px;
+    }
+
+    &_firstSection,
+    &_secondSection {
+      position: relative;
+      box-sizing: border-box;
+      border: 3px solid #0e280e;
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+
+      @include desktop {
+        height: 527px;
+      }
+    }
+
+    &_firstSection {
+      @include desktop {
+        width: 448px;
+      }
+
+      .tabs {
+        display: flex;
+        justify-content: space-between;
+        margin: 21px 31px 0;
+
+        @include desktop {
+          margin: 30px 38px 0;
+        }
+
+        .tab {
+          @include border-white-2;
+          user-select: none;
+          cursor: pointer;
+          font-size: 16px;
+          line-height: 11px;
+          color: #000000;
+          transition: 0.3s;
+
+          @include desktop {
+            @include border-white-2;
+            font-size: 30px;
+            line-height: 20px;
+          }
+
+          &_active {
+            @include border-black-2;
+            color: #eff621;
+
+            @include desktop {
+              @include border-black-3;
+            }
+          }
+        }
+      }
+
+      .unstaking {
+        box-sizing: border-box;
+        padding-left: 17px;
+        padding-right: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 21px 15px 0;
+        height: 0;
+
+        @include desktop {
+          align-items: center;
+          margin: 25px 15px 0;
+          height: 54px;
+        }
+      }
+
+      .balance {
+        box-sizing: border-box;
+        padding-left: 17px;
+        padding-right: 13px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 21px 15px 0;
+        height: 54px;
+        background: rgba(217, 217, 217, 0.4);
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 6px;
+
+        @include desktop {
+          align-items: center;
+          height: 80px;
+          padding-left: 23px;
+          padding-right: 22px;
+          margin: 74px 20px 0;
+        }
+
+        input {
+          background: transparent;
+          height: 100%;
+          font-size: 32px;
+          width: 100%;
+          border: none;
+          outline: none;
+        }
+
+        p {
+          font-size: 20px;
+          line-height: 25px;
+          color: #000000;
+          cursor: pointer;
+          padding-left: 20px;
+
+          @include desktop {
+            font-size: 40px;
+            line-height: 27px;
+          }
+        }
+      }
+
+      .rows {
+        margin-top: 21px;
+        margin-left: 15px;
+
+        @include desktop {
+          margin-top: 53px;
+          margin-left: 21px;
+          margin-right: 21px;
+        }
+
+        .row {
+          display: flex;
+          flex-direction: column;
+
+          @include desktop {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
+
+          &:nth-child(2) {
+            margin-top: 20px;
+
+            @include desktop {
+              margin-top: 40px;
+            }
+          }
+
+          &:nth-child(3) {
+            margin-top: 20px;
+
+            @include desktop {
+              margin-top: 40px;
+            }
+          }
+
+          p:nth-child(1) {
+            @include border-white-3;
+            font-size: 30px;
+            line-height: 20px;
+            color: #000000;
+          }
+
+          p:nth-child(2) {
+            @include border-black-3;
+            font-size: 30px;
+            line-height: 20px;
+            color: #eff621;
+            margin-top: 20px;
+
+            @include desktop {
+              margin-top: 0;
+            }
+          }
+        }
+      }
+
+      .btn {
+        @include button;
+        @include centerRow;
+        display: block;
+        font-size: 24px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        background: radial-gradient(
+              5.12% 19.92% at 92.14% 90.6%,
+              rgba(239, 246, 33, 0.8) 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+            5.71% 38.74% at 98.57% 49.57%,
+            #499000 0%,
+            rgba(73, 144, 0, 0) 100%
+          ),
+          radial-gradient(
+              5.24% 22.38% at 2.14% 30.77%,
+              rgba(239, 246, 33, 0.8) 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              9.67% 65.38% at 5% 91.03%,
+              #499000 0%,
+              rgba(73, 144, 0, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          linear-gradient(
+            180deg,
+            #458d00 0%,
+            #488d00 15.62%,
+            #72b903 44.27%,
+            #71b902 68.75%,
+            #71ba02 100%
+          );
+        border: 5px solid #0e280e;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        margin: 28px 15px 24px;
+        height: 67px;
+        width: calc(100% - 30px);
+
+        &:disabled {
+          background: transparent;
+          cursor: not-allowed;
+        }
+
+        @include desktop {
+          margin: 63px 18px 27px;
+          width: calc(100% - 36px);
+          height: 100px;
+        }
+
+        p {
+          @include border-white-3;
+          font-size: 30px;
+          line-height: 37px;
+          color: #000;
+
+          @include desktop {
+            font-size: 50px;
+            line-height: 62px;
+          }
+        }
+      }
+    }
+
+    &_secondSection {
+      position: relative;
+      margin-top: 20px;
+      height: 326px;
+
+      @include desktop {
+        margin-top: 0;
+        margin-left: 16px;
+        width: 624px;
+        height: 527px;
+      }
+
+      .earning_mobile {
+        @include onlyMobile;
+        position: absolute;
+        z-index: 1;
+        width: 226px;
+        height: 297.96px;
+        top: 27px;
+        left: 14px;
+      }
+
+      .earning_desktop {
+        @include onlyDesktop;
+        position: absolute;
+        z-index: 1;
+        width: 592px;
+        height: 476.71px;
+        top: 30px;
+        left: 14px;
+      }
+
+      &_card {
+        position: relative;
+        z-index: 2;
+        background: radial-gradient(
+              94.89% 72.9% at 50% 38.93%,
+              #eff621 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              5.12% 19.92% at 92.14% 90.6%,
+              rgba(239, 246, 33, 0.8) 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+            5.71% 38.74% at 98.57% 49.57%,
+            #499000 0%,
+            rgba(73, 144, 0, 0) 100%
+          ),
+          radial-gradient(
+              5.24% 22.38% at 2.14% 30.77%,
+              rgba(239, 246, 33, 0.8) 0%,
+              rgba(239, 246, 33, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+          radial-gradient(
+              9.67% 65.38% at 5% 91.03%,
+              #499000 0%,
+              rgba(73, 144, 0, 0) 100%
+            )
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+        border: 3px solid #0e280e;
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        margin: 38px 15px 0;
+
+        @include desktop {
+          margin: 127px 90px 0;
+        }
+
+        p:nth-child(1) {
+          @include border-white-6;
+          font-size: 40px;
+          line-height: 49px;
+          color: #000000;
+          margin-top: 28px;
+          margin-left: 28px;
+
+          @include desktop {
+            font-size: 62.4138px;
+            line-height: 77px;
+            margin-top: 67px;
+            margin-left: 41px;
+          }
+        }
+
+        p:nth-child(2) {
+          @include border-yellow-3;
+          margin-top: 38px;
+          margin-left: 28px;
+          margin-bottom: 55px;
+          font-size: 93.6207px;
+          line-height: 44px;
+          color: #000000;
+
+          @include desktop {
+            margin-left: 49px;
+            margin-bottom: 70px;
+          }
+        }
+      }
+    }
+  }
+}

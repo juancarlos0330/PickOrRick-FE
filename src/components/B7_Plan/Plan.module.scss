@@ -1,0 +1,261 @@
+@import "../../assets/scss/app";
+
+.plan {
+  position: relative;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop {
+    padding-top: 73px;
+  }
+
+  .mobile1 {
+    @include onlyMobile;
+    position: absolute;
+    z-index: 1;
+    top: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+
+  .mobile2 {
+    @include onlyMobile;
+    position: absolute;
+    z-index: 1;
+    top: 615px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+
+  .mobile3 {
+    @include onlyMobile;
+    position: absolute;
+    z-index: 1;
+    top: 1030px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+
+  .mobile4 {
+    @include onlyMobile;
+    position: absolute;
+    z-index: 1;
+    top: 1445px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 300px;
+    height: 94.55px;
+
+    @include desktop {
+      width: 514px;
+      height: 162px;
+    }
+  }
+
+  .title {
+    @include b4-title;
+    position: relative;
+    z-index: 2;
+    margin-top: 20px;
+    font-size: 60px;
+    line-height: 74px;
+    text-align: center;
+    color: #000000;
+
+    @include desktop {
+      margin-top: 0;
+      font-size: 100px;
+      line-height: 123px;
+    }
+  }
+
+  .pots {
+    position: relative;
+    z-index: 2;
+    margin-top: 22px;
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+      margin-top: 86px;
+    }
+
+    .pot {
+      position: relative;
+      height: 130px;
+
+      @include desktop {
+        height: 461px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 9px;
+
+        @include desktop {
+          margin-left: 78px;
+        }
+      }
+
+      &:nth-child(2) {
+        @include desktop {
+          margin-top: 80px;
+        }
+      }
+
+      img {
+        display: block;
+        height: 100%;
+        width: auto;
+      }
+
+      .label,
+      .text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+        color: #000000;
+        width: 100%;
+      }
+
+      .label {
+        @include b7-label-mobile;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        //white-space: nowrap;
+
+        @include desktop {
+          @include b7-label;
+          top: -40px;
+          font-size: 50px;
+          line-height: 62px;
+        }
+      }
+
+      .text {
+        @include b7-text-mobile;
+        font-size: 12px;
+        line-height: 15px;
+        width: 230px;
+
+        @include desktop {
+          @include b7-text;
+          width: 240px;
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+
+      &:nth-child(1) {
+        .text {
+          bottom: -22px;
+          width: 77px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .text {
+          bottom: -22px;
+          width: 77px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        .text {
+          bottom: -22px;
+          width: 77px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        .label {
+          top: -18px;
+
+          @include desktop {
+            top: -40px;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .label {
+          top: -18px;
+          width: 80px;
+
+          @include desktop {
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .pretext {
+    @include border-white-10;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+    margin-top: 35px;
+    text-align: center;
+
+    @include desktop {
+      @include border-white-16;
+      width: 717px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 30px;
+      line-height: 40px;
+      margin-top: 75px;
+    }
+  }
+
+  .text {
+    @include b5-text-mobile;
+    position: relative;
+    z-index: 2;
+    margin-top: 35px;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+
+    @include desktop {
+      @include b5-text-desktop;
+      margin-top: 75px;
+      width: 735px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 40px;
+      line-height: 49px;
+    }
+  }
+}

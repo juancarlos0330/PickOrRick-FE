@@ -1,0 +1,50 @@
+@import "../../assets/scss/app";
+
+.stakingPage {
+  background-image: url(../../assets/jpg/dashboard-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-left: 10px;
+  padding-right: 10px;
+  box-sizing: border-box;
+  min-height: 100vh;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 2;
+
+    @include desktop {
+      width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .cucumber_left, .cucumber_right {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 60px;
+    height: auto;
+
+    @include desktop {
+      width: 60px;
+    }
+  }
+
+  .cucumber_left {
+    left: 0;
+  }
+
+  .cucumber_right {
+    right: 0;
+  }
+
+
+}

@@ -1,0 +1,28 @@
+name: Front build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Pull & build front
+      uses: appleboy/ssh-action@master 
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USER }}
+        key: ${{ secrets.SECRET_KEY }}
+        port: 22
+        script: |
+          cd /home/pick-or-rick/front
+          git fetch --all
+          git checkout main
+          git reset --hard HEAD
+          git pull
+          cp -f /home/pick-or-rick/env/.env.front /home/pick-or-rick/front/.env
+          npm install
+          npm run build

@@ -1,0 +1,19 @@
+@import "../../assets/scss/app";
+
+.homePage {
+  overflow: hidden;
+  background: darkgreen;
+  background-image: url(../../assets/png/background-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+
+
+  @include desktop {
+    background-image: url(../../assets/png/background-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+  }
+
+}

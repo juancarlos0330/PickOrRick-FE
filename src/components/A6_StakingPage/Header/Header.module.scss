@@ -1,0 +1,133 @@
+@import "../../../assets/scss/app";
+
+.header {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  display: flex;
+  align-items: center;
+
+  @include desktop {
+    padding-bottom: 22px;
+  }
+
+  .innerMobile {
+    @include onlyMobile;
+    width: 100%;
+
+    img {
+      display: block;
+      width: 224px;
+      height: 125px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .innerDesktop {
+    @include onlyDesktop(flex);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 224px;
+        height: 125px;
+
+        img {
+          display: block;
+          width: 224px;
+          height: 125px;
+        }
+      }
+
+      .texts {
+        margin-left: 19px;
+        flex-direction: column;
+        justify-content: center;
+
+        .userName {
+          @include a3-header-username;
+          font-size: 40px;
+          line-height: 49px;
+          color: #000000;
+        }
+
+        .label {
+          margin-top: 12px;
+          @include a3-header-label;
+          font-size: 16px;
+          line-height: 20px;
+          color: #000000;
+        }
+      }
+
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+
+      .downloadData {
+        @include button;
+        @include centerRow;
+        width: 297px;
+        height: 62px;
+        background: radial-gradient(5.12% 19.92% at 92.14% 90.6%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(5.71% 38.74% at 98.57% 49.57%, #499000 0%, rgba(73, 144, 0, 0) 100%), radial-gradient(5.24% 22.38% at 2.14% 30.77%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(9.67% 65.38% at 5% 91.03%, #499000 0%, rgba(73, 144, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , linear-gradient(180deg, #458D00 0%, #488D00 15.62%, #72B903 44.27%, #71B902 68.75%, #71BA02 100%);
+        border: 3px solid #0E280E;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+
+        p {
+          @include a3-dashboard-download-data;
+          font-size: 30px;
+          line-height: 37px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #000000;
+        }
+      }
+
+      .link {
+        margin-left: 20px;
+        @include button;
+        @include centerRow;
+        background: radial-gradient(5.12% 19.92% at 92.14% 90.6%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(5.71% 38.74% at 98.57% 49.57%, #499000 0%, rgba(73, 144, 0, 0) 100%), radial-gradient(5.24% 22.38% at 2.14% 30.77%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(9.67% 65.38% at 5% 91.03%, #499000 0%, rgba(73, 144, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #458D00 0%, #488D00 15.62%, #72B903 44.27%, #71B902 68.75%, #71BA02 100%);
+        border: 3px solid #0E280E;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        height: 62px;
+        width: 88px;
+
+        svg {
+          margin-top: 16px;
+        }
+      }
+
+      .more {
+        margin-left: 20px;
+        @include button;
+        @include centerRow;
+        background: radial-gradient(5.12% 19.92% at 92.14% 90.6%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(5.71% 38.74% at 98.57% 49.57%, #499000 0%, rgba(73, 144, 0, 0) 100%), radial-gradient(5.24% 22.38% at 2.14% 30.77%, rgba(239, 246, 33, 0.8) 0%, rgba(239, 246, 33, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(9.67% 65.38% at 5% 91.03%, #499000 0%, rgba(73, 144, 0, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, linear-gradient(180deg, #458D00 0%, #488D00 15.62%, #72B903 44.27%, #71B902 68.75%, #71BA02 100%);
+        border: 3px solid #0E280E;
+        box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 100px;
+        height: 62px;
+        width: 88px;
+
+        svg {
+          margin-top: 16px;
+        }
+      }
+
+    }
+
+  }
+
+}

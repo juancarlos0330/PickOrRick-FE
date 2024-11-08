@@ -1,2 +1,6 @@
-# PickOrRick-FE
-This is voting system with pickorrick token
+# pick-or-rick
+
+PickOrRick token contract address: 0xB8c793b4b479c77bE5FB39254fe8F985Fe23c02d
+Presale Token contract address: 0xa791167C8a58bFB1586f2Ea8426E50Ce530B88d7
+Staking Contract address: 0x99277Da70C6E15d982E7e08D1A9c41E1a0c7f9f1
+Voting Contract Address: 0x83596D21d1FEEA7eD77413A201809Be17e4507FF

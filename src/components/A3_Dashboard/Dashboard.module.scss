@@ -1,0 +1,61 @@
+@import "../../assets/scss/app";
+
+.dashboard {
+  background-image: url(../../assets/jpg/dashboard-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include desktop {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .inner {
+    position: relative;
+    z-index: 2;
+
+    @include desktop {
+      width: 1120px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .cucumber_left,
+  .cucumber_right {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 60px;
+    height: auto;
+
+    @include desktop {
+      width: 60px;
+    }
+  }
+
+  .cucumber_left {
+    left: 0;
+  }
+
+  .cucumber_right {
+    right: 0;
+  }
+}
+
+.verifyPage {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.verifytext {
+  font-size: 42px;
+  margin-bottom: 20px;
+}

@@ -1,0 +1,202 @@
+@import "../../assets/scss/app";
+
+.holders {
+  position: relative;
+  padding-top: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  @include desktop {
+    padding-top: 91px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mobile1 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .mobile2 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: 370px;
+    left: 50%;
+    width: 380px;
+    transform: translateX(-50%);
+  }
+
+  .desktop {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    top: -550px;
+    left: 50%;
+    width: 1825px;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    position: relative;
+    z-index: 3;
+    @include b4-title;
+    font-size: 60px;
+    line-height: 74px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    @include desktop {
+      font-size: 150px;
+      line-height: 185px;
+    }
+  }
+
+  .pyramid {
+    position: absolute;
+    z-index: 2;
+    top: 226px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 381px;
+    height: 381px;
+
+    @include desktop {
+      top: 250px;
+      width: 1273px;
+      height: 1273px;
+    }
+  }
+
+  .ufo {
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    left: calc(50% - 103px);
+    transform: translateX(-50%);
+    width: 328.59px;
+    height: 271.9px;
+
+    @include desktop {
+      width: 939px;
+      height: 777px;
+      top: 97px;
+      left: calc(50% - 476px);
+    }
+  }
+
+  .items {
+    position: relative;
+    z-index: 2;
+
+    .row {
+      display: flex;
+      justify-content: center;
+
+      &:nth-child(1) {
+        margin-top: 140px;
+
+        @include desktop {
+          margin-top: 46px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-top: 50px;
+
+        @include desktop {
+          margin-top: 161px;
+        }
+
+        p:nth-child(2) {
+          margin-left: 34px;
+
+          @include desktop {
+            margin-left: 122px;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        margin-top: 51px;
+
+        @include desktop {
+          margin-top: 170px;
+        }
+
+        p:nth-child(2) {
+          margin-left: 55px;
+
+          @include desktop {
+            margin-left: 180px;
+          }
+        }
+
+        p:nth-child(3) {
+          margin-left: 55px;
+
+          @include desktop {
+            margin-left: 180px;
+          }
+        }
+      }
+
+      p {
+        @include b4-item-mobile;
+        font-size: 29.9293px;
+        line-height: 37px;
+        text-align: center;
+        color: #000000;
+
+        @include desktop {
+          @include b4-item-desktop;
+          font-size: 100px;
+          line-height: 123px;
+        }
+      }
+    }
+  }
+
+  .text0, .text1 {
+    @include b4-text-mobile;
+    position: relative;
+    z-index: 2;
+
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;
+
+    @include desktop {
+      @include b4-text-desktop;
+
+      font-size: 40px;
+      line-height: 49px;
+      width: 823px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .text0 {
+    margin-top: 94px;
+
+    @include desktop {
+      margin-top: 257px;
+    }
+  }
+
+  .text1 {
+    margin-top: 25px;
+
+    @include desktop {
+      margin-top: 50px;
+    }
+  }
+}

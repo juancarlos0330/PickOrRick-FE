@@ -1,0 +1,125 @@
+@import "../../assets/scss/app";
+
+.game {
+  position: relative;
+  padding-top: 30px;
+
+  @include desktop {
+    padding-top: 110px;
+  }
+
+  .mobile1 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .mobile2 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: 510px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .desktop {
+    @include onlyDesktop();
+    position: absolute;
+    z-index: 1;
+    top: -210px;
+    left: 50%;
+    width: 1825px;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    position: relative;
+    z-index: 3;
+    @include b4-title;
+    font-size: 60px;
+    line-height: 74px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    @include desktop {
+      font-size: 150px;
+      line-height: 185px;
+    }
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 20;
+    margin-top: 28px;
+    width: 300px;
+    height: 165px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 6px solid #FFF;
+    border-radius: 6px;
+
+    @include desktop {
+      margin-top: 35px;
+      width: 1120px;
+      height: 616px;
+      border: 16px solid #FFF;
+      border-radius: 16px;
+    }
+
+    iframe {
+      width: 300px;
+      height: 165px;
+
+      @include desktop {
+        width: 1120px;
+        height: 616px;
+      }
+    }
+  }
+
+  .card {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-top: 28px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+      margin-top: 35px;
+      width: 736px;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    svg {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -13px;
+      width: 114px;
+      height: 99px;
+
+      @include desktop {
+        bottom: -48px;
+        width: 300px;
+        height: 260px;
+      }
+
+    }
+  }
+
+
+}

@@ -1,0 +1,256 @@
+@import "../../assets/scss/app";
+
+.tokenomics {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 40px;
+  position: relative;
+
+  @include desktop {
+    padding-top: 75px;
+  }
+
+  .mobile1 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: -30px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .mobile2 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: 800px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .mobile3 {
+    @include onlyMobile();
+    position: absolute;
+    z-index: 1;
+    top: 380px;
+    left: 50%;
+    width: 320px;
+    transform: translateX(-50%);
+  }
+
+  .title {
+    position: relative;
+    z-index: 3;
+    @include b4-title;
+    font-size: 60px;
+    line-height: 74px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+
+    @include desktop {
+      font-size: 150px;
+      line-height: 185px;
+    }
+  }
+
+  .pottops {
+    position: relative;
+    z-index: 3;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+
+    @include desktop {
+      margin-top: 36px;
+    }
+
+    .pot {
+      position: relative;
+      width: 139.05px;
+      height: 192.59px;
+
+      @include desktop {
+        width: 387px;
+        height: 536px;
+      }
+
+      &:not(:first-child) {
+        margin-left: 15px;
+
+        @include desktop {
+          margin-left: 100px;
+        }
+      }
+
+      img {
+        display: block;
+        width: 139.05px;
+        height: 192.59px;
+
+        @include desktop {
+          width: 387px;
+          height: 536px;
+        }
+      }
+
+      .label {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        text-align: center;
+        @include b6-label-mobile;
+
+        @include desktop {
+          font-size: 50px;
+          line-height: 62px;
+          @include b6-label-desktop;
+        }
+      }
+
+      &:nth-child(1) {
+        p {
+          bottom: 20px;
+          width: 100%;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        p {
+          bottom: 7px;
+          width: 85px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        p {
+          bottom: 7px;
+          width: 85px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+
+  .pots {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;
+
+    @include desktop {
+      margin-top: -60px;
+    }
+
+    .pot {
+      position: relative;
+      width: 139.05px;
+      height: 192.59px;
+
+      @include desktop {
+        width: 387px;
+        height: 536px;
+      }
+
+      // &:not(:first-child) {
+      //   margin-left: 15px;
+
+      //   @include desktop {
+      //     margin-left: 84px;
+      //   }
+      // }
+
+      img {
+        display: block;
+        width: 139.05px;
+        height: 192.59px;
+
+        @include desktop {
+          width: 387px;
+          height: 536px;
+        }
+      }
+
+      .label {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 16px;
+        line-height: 20px;
+        color: #000000;
+        text-align: center;
+        @include b6-label-mobile;
+
+        @include desktop {
+          font-size: 50px;
+          line-height: 62px;
+          @include b6-label-desktop;
+        }
+      }
+
+      &:nth-child(1) {
+        p {
+          bottom: 20px;
+          width: 100%;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        margin-top: 10px;
+
+        @include desktop {
+          margin-top: 15px;
+        }
+
+        p {
+          bottom: 7px;
+          width: 85px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        p {
+          bottom: 7px;
+          width: 85px;
+
+          @include desktop {
+            bottom: 35px;
+            width: 75%;
+          }
+        }
+      }
+    }
+  }
+}
